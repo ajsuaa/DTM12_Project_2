@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Ui;
+using UnityEngine.UI;
+using TMPro;
 
 public class CountdownTimer : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 10f;
-
-    public Text countdownText;
+    float startingTime = 30f;
     
+    public TMP_Text countdownText;
+ 
     // Start is called before the first frame update
     void Start()
     {
