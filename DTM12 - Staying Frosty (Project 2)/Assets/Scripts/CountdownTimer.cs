@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
+
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -26,6 +28,8 @@ public class CountdownTimer : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
-        }                              
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        } 
     }
+
 }
