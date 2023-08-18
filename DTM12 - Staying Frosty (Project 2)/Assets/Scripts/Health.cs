@@ -22,8 +22,6 @@ public class Health : MonoBehaviour
     //This makes the health UI smoother
     float lerpSpeed;
     
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +31,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Health: " + health + "%";
+        healthText.text = "Temperature: " + health + "%";
         //This makes sure that the health isn't greater than the maximum health
         if (health > maxHealth) health = maxHealth;
 
@@ -56,11 +54,9 @@ public class Health : MonoBehaviour
 
     void ColorChanger()
     {
-        Color healthColor = Color.Lerp(Color.blue, Color.green, (health / maxHealth));
+        Color healthColor = Color.Lerp(Color.blue, Color.red, (health / maxHealth));
         healthBar.color = healthColor;
     }
-
-
 
     public void Damage(float damagePoints)
     {
