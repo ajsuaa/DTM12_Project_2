@@ -37,16 +37,5 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    //This variable is used when recieving a Game Over
-    private void OnCollisionEnter(Collision other)
-    {
-        // When player collides with red walls, transfer user to Build Scene 2 (Game Over Scene)
-        if (other.gameObject.name == "Wall")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-    }
-
-
-
+    //A variable that makes the player interact with the objects
 }

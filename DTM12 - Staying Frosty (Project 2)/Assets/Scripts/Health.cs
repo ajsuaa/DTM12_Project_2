@@ -38,6 +38,7 @@ public class Health : MonoBehaviour
         HealthBarFiller();
         ColorChanger();
 
+        //If there is no more health, the player is transferred to the "Game Over" scene
         if (health <= 0)
         {
             currentHealth = 0;
