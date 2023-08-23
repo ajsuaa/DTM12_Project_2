@@ -1,4 +1,4 @@
-//THIS SCRIPT IS FROM A SCRIPT
+//THIS SCRIPT IS FROM A TUTORIAL
 
 using System.Collections;
 using System.Collections.Generic;
@@ -13,19 +13,24 @@ public class Health : MonoBehaviour
     public TMP_Text healthText;
     //This displays the Health Bar
     public Image healthBar;
+    public float healthDecreaseRate = 1f; 
 
     //Health
-    float currentHealth= 0f;
+    float currentHealth = 0f;
 
     //Shows the maximum amount of health
     float health, maxHealth = 100;
     //This makes the health UI smoother
     float lerpSpeed;
-    
+
+    public float currentTime;
+    float startingTime; 
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        health = currentTime;
     }
 
     // Update is called once per frame
@@ -64,6 +69,8 @@ public class Health : MonoBehaviour
         //This lowers the health
         if (health > 0) 
             health -= damagePoints;
+
+        currentTime -= 1 * Time.deltaTime;
     }
 
     public void Heal(float healingPoints)

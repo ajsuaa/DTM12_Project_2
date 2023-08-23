@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - note
+  - Door0
+  - Door1
+  - Door2
+  - Door3
+  - Window0
+  - Window1
+  - Window2
+  - Window3
   layers:
   - Default
   - TransparentFX
