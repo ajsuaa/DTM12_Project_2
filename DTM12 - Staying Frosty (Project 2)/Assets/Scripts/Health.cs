@@ -13,30 +13,33 @@ public class Health : MonoBehaviour
     public TMP_Text healthText;
     //This displays the Health Bar
     public Image healthBar;
-    public float healthDecreaseRate = 1f; 
-
+    public float healthDecreaseRate = 20f;
+    // Set the countdown duration
+    public float countdownDuration = 60f; 
     //Health
     float currentHealth = 0f;
-
     //Shows the maximum amount of health
     float health, maxHealth = 100;
     //This makes the health UI smoother
     float lerpSpeed;
-
-    public float currentTime;
+    float currentTime;
     float startingTime; 
 
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
-        health = currentTime;
+       //Intialize currentTime to countdownDuration
+        currentTime = countdownDuration; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Temperature: " + health + "%";
+
+        currentTime -= Time.deltaTime;
+        health = (currentTime / countdownDuration) * maxHealth;
+        healthText.text = "Temperature: " + Mathf.RoundToInt(health) + "%";
         //This makes sure that the health isn't greater than the maximum health
         if (health > maxHealth) health = maxHealth;
 

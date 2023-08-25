@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     //Determines the speed of the player
     private float speed = 20.0f;
 
+    public GameObject parentWindows;
+    public GameObject parentDoors;
+    public float test;
+
     //Provides the  Rigidbody a variable
     private Rigidbody playerRb;
 
@@ -34,6 +38,18 @@ public class PlayerController : MonoBehaviour
         //Applying the speed when controlling the player
         playerRb.AddForce(Vector3.forward * speed * verticalInput);
         playerRb.AddForce(Vector3.right * speed * horizontalInput);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.IsChildOf(parentWindows.transform))
+        {
+            //collisionObject = collision.gameObject;
+            //collisionObject.transform
+
+            // raose the window
+            // update the temperature so its not increaing so fast.
+          }
     }
 
 

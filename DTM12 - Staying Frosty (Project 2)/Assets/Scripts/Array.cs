@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Array : MonoBehaviour
 {
-    public int[] intergers;
+    // public int[] intergers;
     public GameObject[] gameObjects;
 
     // Start is called before the first frame update

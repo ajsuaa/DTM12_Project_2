@@ -2476,6 +2476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a90ac9e9daff864e8986a69f34ea53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 0}
   player: {fileID: 1308716902}
 --- !u!1 &1035342999
 GameObject:
@@ -2622,7 +2623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba335d6c9dfaf8448a8074a103f765a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intergers: 00000000000000000000000000000000
   gameObjects:
   - {fileID: 19616554}
   - {fileID: 317259923}
@@ -3264,7 +3264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba335d6c9dfaf8448a8074a103f765a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intergers: 00000000
   gameObjects:
   - {fileID: 2095172494}
   - {fileID: 709605161}
@@ -3585,6 +3584,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfb11cca8b20574bafcdcdb4667bbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentWindows: {fileID: 1284726251}
+  parentDoors: {fileID: 1061409725}
+  test: 0
 --- !u!54 &1308716908
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3738,8 +3740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 148775994}
   healthBar: {fileID: 384540409}
-  healthDecreaseRate: 10
-  currentTime: 5
+  healthDecreaseRate: 11.1
+  countdownDuration: 14.9
 --- !u!1 &1509354164
 GameObject:
   m_ObjectHideFlags: 0
