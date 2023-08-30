@@ -15,4 +15,14 @@ public class Test : MonoBehaviour
     {
         
     }
+
+    //This variable is used when recieving a Game Over
+    private void OnCollisionEnter(Collision other)
+    {
+
+        if (other.gameObject.name == "Player")
+        {
+            transform.position = new Vector3(0, 20.0f, 0);
+        }
+    }
 }

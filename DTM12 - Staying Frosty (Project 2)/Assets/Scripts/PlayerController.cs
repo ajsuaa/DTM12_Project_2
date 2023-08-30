@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
             //collisionObject = collision.gameObject;
             //collisionObject.transform
 
+
             // raose the window
             // update the temperature so its not increaing so fast.
           }
